@@ -1,0 +1,51 @@
+// variables colors 
+$bleu_mar: rgb(7 13 60);
+$ora: rgb(214, 114, 0);
+$gris: #EFEFEF;
+$white:#ffffff;
+$transformValue:32%;
+// variables breakpoints...............
+
+    // breakoints min_
+    $breakpoints: (
+        // mobile size small
+        screen-sm-min:319px,
+        // mobile size medium
+        screen-mm-min: 374px,
+        // mobile size large
+        screen-lm-min: 424px,
+        // tablet normal size
+        tablet-norml-min: 767px, 
+        // tablet large size
+        tablet-large-min: 992px,
+        // laptop normal size
+        laptop-min: 1023px,
+        // laptop large size
+        laptop-large-min: 1439px,
+
+    );
+
+    // breakpoints max_
+    $breakPointsMax: (
+        // mobile samll size
+        screen-sm-max:373px,
+        // mobile size medium
+        screen-mm-max: 423px,
+        // mobile size large
+        screen-lm-max: 766px,
+        // tablet normal size
+        tablet-norml-max: 991px, 
+        // tablet large size
+        tablet-large-max: 1022px,
+        // laptop normal size
+        laptop-max: 1438px,
+        // laptop large size
+        laptop-large-max: 1441px,
+ 
+    );
+// var taille d'ecrann maximuù
+// $media_max : (
+//     'mobile'    : "screen and (max-width: 667px)",
+//     'tablet'    : "screen and (min-width: 668px) and (max-width: $size__site_content_width)",
+//     'desktop'   : "screen and (min-width: ($size__site_content_width + 1))"
+// );

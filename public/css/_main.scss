@@ -1,0 +1,105 @@
+@import'./var';
+@import'./mixin';
+header{
+    background-color: #fff;
+    & #log{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px 15px 10px;
+        & .avatar{
+            font-size: 40px;
+            color: $ora;
+        }
+    }
+    & #head{
+        text-align: center;
+        & h1{
+            // text-shadow:0px 2px $gris;
+            font-size: 22px;
+            font-family: 'Abril Fatface', cursive;
+            color: $ora;
+        }
+        & form{
+            padding: 10px 0 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & input{
+                border: transparent;
+                background-color: $gris;
+                padding: 5px;
+                margin-top: 1px;
+                border-radius: 2px;
+            }
+            & button{
+                width: 29px;
+                height: 29px;
+                border-radius: 38px;
+                margin-left: 5px;
+                border: transparent;
+                & .icone{
+                    font-size: 14px;
+                    justify-content: center;
+                    display: flex;
+                }
+            }
+        }
+    }
+    // 
+    & nav{
+        display: none;
+        @media screen and (min-width:600px) {
+            display: flex;
+        }
+        & ul{
+            width: -webkit-fill-available;
+            padding: 0px;
+            display: block;
+            list-style-type: none;
+            background-color: $gris;
+            margin-top: 10px;
+            text-align: center;
+            @media screen and (min-width:600px) {
+                @include navAll
+            }
+
+            & li{
+                padding:10px 5px;
+                list-style-type: none;
+                border-bottom: 1px solid rgb(212, 208, 208);
+                @media screen and (min-width:600px) {
+                    border: none;
+                }
+                
+            }
+        }
+    }
+}
+
+// section #id sect 
+#sct{
+    background-color: $bleu_mar;
+    @media screen and (max-width:600px) {
+        margin-top: 20px;
+     }
+}
+
+// footer
+footer{
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient($ora,$bleu_mar);
+    position:absolute;
+    bottom:0;  /* on le colle en bas */
+    width: -webkit-fill-available;
+    a{
+        color: #fff;
+        font-size: 25px;
+    }
+    & ul{
+        @include navAll;
+    }
+}
+

@@ -1,0 +1,52 @@
+@import'./var';
+
+// @mixins breakpoints_
+
+//  mobile small devices
+@mixin smalM {
+    @media screen and (min-width: map-get($breakpoints, screen-sm-min)) and (max-width: map-get($breakPointsMax, screen-sm-max)) {
+        @content;
+    }
+}
+// mobile medium devices
+@mixin mediumM {
+    @media screen and (min-width: map-get($breakpoints, screen-mm-min)) and (max-width: map-get($breakPointsMax, screen-mm-max)) {
+        @content;
+    }
+}
+// mobile large devices
+@mixin largeM {
+    @media screen and (min-width: map-get($breakpoints, screen-lm-min)) and (max-width: map-get($breakPointsMax, screen-lm-max)){
+        @content;
+    }
+}
+// tablet normal size
+@mixin tabletN {
+    @media screen and (min-width: map-get($breakpoints, tablet-norml-min)) and (max-width: map-get($breakPointsMax,tablet-norml-max)) {
+        @content;
+    }
+}
+// tablet large size
+@mixin tabletL {
+    @media screen and (min-width: map-get($breakpoints, tablet-large-min )) and (max-width: map-get($breakPointsMax,tablet-large-max)) {
+        @content;
+    }
+}
+// laptop normal size
+@mixin laptop {
+    @media screen and (min-width: map-get($breakpoints, laptop-min)) and (max-width: map-get($breakPointsMax, laptop-max)) {
+        @content; 
+    }
+}
+// laptop large size
+@mixin laptopL {
+    @media screen and (min-width: map-get($breakpoints, laptop-large-min)) and (max-width: map-get($breakPointsMax, laptop-large-max)) {
+        @content;
+    }
+}
+// Computer sizes
+@mixin computer {
+    @media screen and (min-width:1442px) and (max-width:2560px) {
+        @content;
+    }
+}

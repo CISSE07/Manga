@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+a span {
+  color: rgb(214, 114, 0);
+}
+a span:hover {
+  color: #000000;
+}
+a:hover {
+  color: #000000;
+}
+
+h2 {
+  font-size: 17px;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+}
+h2::after {
+  position: absolute;
+  content: "";
+  width: 130px;
+  height: 3px;
+  background-color: rgb(214, 114, 0);
+  top: 35px;
+  left: 11px;
+}
+
+header {
+  background-color: #fff;
+}
+header #log {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 15px 10px;
+}
+header #log .avatar {
+  font-size: 40px;
+  color: rgb(214, 114, 0);
+}
+header #head {
+  text-align: center;
+}
+header #head h1 {
+  font-size: 22px;
+  font-family: "Abril Fatface", cursive;
+  color: rgb(214, 114, 0);
+}
+header #head form {
+  padding: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #head form input {
+  border: transparent;
+  background-color: #EFEFEF;
+  padding: 5px;
+  margin-top: 1px;
+  border-radius: 2px;
+}
+header #head form button {
+  width: 29px;
+  height: 29px;
+  border-radius: 38px;
+  margin-left: 5px;
+  border: transparent;
+}
+header #head form button .icone {
+  font-size: 14px;
+  justify-content: center;
+  display: flex;
+}
+header nav {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  header nav {
+    display: flex;
+  }
+}
+header nav ul {
+  width: -webkit-fill-available;
+  padding: 0px;
+  display: block;
+  list-style-type: none;
+  background-color: #EFEFEF;
+  margin-top: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  header nav ul {
+    padding: 10px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+  }
+}
+header nav ul li {
+  padding: 10px 5px;
+  list-style-type: none;
+  border-bottom: 1px solid rgb(212, 208, 208);
+}
+@media screen and (min-width: 600px) {
+  header nav ul li {
+    border: none;
+  }
+}
+
+#sct {
+  background-color: rgb(7, 13, 60);
+}
+@media screen and (max-width: 600px) {
+  #sct {
+    margin-top: 20px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  background: linear-gradient(rgb(214, 114, 0), rgb(7, 13, 60));
+  position: absolute;
+  bottom: 0; /* on le colle en bas */
+  width: -webkit-fill-available;
+}
+footer a {
+  color: #fff;
+  font-size: 25px;
+}
+footer ul {
+  padding: 10px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+/*       Hamburger-Cross         */
+.container {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  position: absolute;
+  margin-top: -28px;
+  left: 5px;
+  background-color: #EFEFEF;
+  border-radius: 30px;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    display: none;
+  }
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.hamberger {
+  height: 14px;
+  width: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.hamberger:hover {
+  cursor: pointer;
+}
+.hamberger span {
+  display: inline-flex;
+  height: 1px;
+  position: relative;
+}
+.hamberger span::before, .hamberger span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all ease 0.25s;
+  background-color: black;
+}
+.hamberger span::before {
+  left: 0;
+  transform-origin: left;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.hamberger span::after {
+  right: 0;
+  transform-origin: right;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.hamberger span:nth-child(2)::before, .hamberger span:nth-child(2)::after {
+  width: 100%;
+  border-radius: 4px;
+  left: 0;
+  right: 0;
+}
+
+input[type=checkbox]:checked + label .hamberger span:nth-child(1)::before {
+  transform: translateX(32%) rotate(45deg);
+}
+input[type=checkbox]:checked + label .hamberger span:nth-child(1)::after {
+  transform: translateX(-32%) rotate(-45deg);
+}
+input[type=checkbox]:checked + label .hamberger span:nth-child(2)::before, input[type=checkbox]:checked + label .hamberger span:nth-child(2)::after {
+  width: 0;
+}
+input[type=checkbox]:checked + label .hamberger span:nth-child(3)::before {
+  transform: translateX(32%) rotate(-45deg);
+}
+input[type=checkbox]:checked + label .hamberger span:nth-child(3)::after {
+  transform: translateX(-32%) rotate(45deg);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}/*# sourceMappingURL=index.css.map */
